@@ -25,6 +25,13 @@
 	</properties>
 
 	<dependencies>
+
+     <dependency>
+        <groupId>org.springframework.data</groupId>
+        <artifactId>spring-data-cassandra</artifactId>
+        <version>1.5.3.RELEASE</version>
+    </dependency>
+ 
 	<dependency>
     <groupId>com.fasterxml.jackson.core</groupId>
     <artifactId>jackson-databind</artifactId>
