@@ -15,6 +15,7 @@ class ApplicationConfig extends AbstractCassandraConfiguration {
 
   @Override
   protected String getKeyspaceName() {
+	  //key space on my dvce
     return "mykeyspace";
   }
 }
