@@ -31,11 +31,11 @@ public class SampleCassandraApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		this.repository.deleteAll();
+		//this.repository.deleteAll();
 
 		// save a couple of customers
-		this.repository.save(new Customer(UUIDs.timeBased(), "Alice", "Smith"));
-		this.repository.save(new Customer(UUIDs.timeBased(), "Bob", "Smith"));
+		this.repository.save(new Customer(UUIDs.timeBased(), "Aliceq", "Smithy"));
+		this.repository.save(new Customer(UUIDs.timeBased(), "Boby", "Smithy"));
 
 		// fetch all customers
 		System.out.println("Customers found with findAll():");
@@ -48,11 +48,11 @@ public class SampleCassandraApplication implements CommandLineRunner {
 		// fetch an individual customer
 		System.out.println("Customer found with findByFirstName('Alice'):");
 		System.out.println("--------------------------------");
-		System.out.println(this.repository.findByFirstName("Alice"));
+		System.out.println(this.repository.findByFirstName("Aliceq"));
 
 		System.out.println("Customers found with findByLastName('Smith'):");
 		System.out.println("--------------------------------");
-		for (Customer customer : this.repository.findByLastName("Smith")) {
+		for (Customer customer : this.repository.findByLastName("Smithy")) {
 			System.out.println(customer);
 		}
 	}
